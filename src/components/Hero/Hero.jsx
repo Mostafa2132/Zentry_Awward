@@ -59,11 +59,11 @@ export default function Hero() {
     });
   });
 
-  useEffect(() => {
-    if (loadedved === totalVedios - 1) {
-      setIsLoading(false);
-    }
-  }, [loadedved]);
+  // useEffect(() => {
+  //   if (loadedved === totalVedios - 1) {
+  //     setIsLoading(false);
+  //   }
+  // }, [loadedved]);
 
   const getVideoSrc = (index) => `/public/videos/hero-${index}.mp4`;
 
@@ -78,7 +78,7 @@ export default function Hero() {
 
   return (
     <section className="h-dvh relative w-screen">
-      {isLoading && (
+      {/* {isLoading && (
         <div className="flex flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           <div className="three-body">
             <div className="three-body__dot" />
@@ -86,7 +86,7 @@ export default function Hero() {
             <div className="three-body__dot" />
           </div>
         </div>
-      )}
+      )} */}
       <div
         className="relative h-dvh w-screen  z-10 rounded-lg bg-blue-75 overflow-hidden "
         id="video-frame"
