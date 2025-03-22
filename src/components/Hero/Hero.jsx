@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function Hero() {
   const [crruntIndex, setCrruntIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
   const [loadedved, setLoadedved] = useState(0);
 
   const totalVedios = 4;
@@ -59,12 +59,6 @@ export default function Hero() {
     });
   });
 
-  // useEffect(() => {
-  //   if (loadedved === totalVedios - 1) {
-  //     setIsLoading(false);
-  //   }
-  // }, [loadedved]);
-
   const getVideoSrc = (index) => `/public/videos/hero-${index}.mp4`;
 
   const handelVideoLoaded = () => {
@@ -75,6 +69,12 @@ export default function Hero() {
     setHasClicked(true);
     setCrruntIndex(upcomingVideoIndex);
   }
+
+  // useEffect(() => {
+  //   if (loadedved === totalVedios - 1) {
+  //     setIsLoading(false);
+  //   }
+  // }, [loadedved]);
 
   return (
     <section className="h-dvh relative w-screen">
